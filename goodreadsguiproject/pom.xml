@@ -21,8 +21,8 @@
             <version>13</version>
         </dependency>
         <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>ss.usermodel.Cell</artifactId>
+            <groupId>org.apache</groupId>
+            <artifactId>poi</artifactId>
             <version>17</version>
         </dependency>
     </dependencies>
