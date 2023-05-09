@@ -108,5 +108,9 @@ public class Book {
     public String toString() {
         return "Book{" + "author=" + author + ", bookFormat=" + bookFormat + ", description=" + description + ", genre=" + genre + ", title=" + title + ", pageNumber=" + pageNumber + ", bookRating=" + bookRating + ", reviewAmount=" + reviewAmount + ", totalRatings=" + totalRatings + '}';
     }
+
+    public static String getResourceAsStream(String string) {
+        return null;
+    }
     
 }

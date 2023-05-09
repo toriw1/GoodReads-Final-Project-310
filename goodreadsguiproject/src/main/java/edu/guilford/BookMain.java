@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import org.apache.poi.ss.usermodel.Cell;
@@ -22,26 +23,16 @@ public class BookMain extends Application {
     private static Scene scene;
 
     @Override
-    public void start(Stage stage) throws IOException {
-        // Instantiate a VBox root mode
-        VBox root = new VBox();
+    public void start(Stage stage) throws IOException, URISyntaxException {
 
-        // Instantiate a default book object
-        // Book book = new Book();
-
-        // Instantiate a BookPanel object and add it to the root node
-        root.getChildren().add(new BookPanelNetBeans());
-        scene = new Scene(root, 640, 480);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public static void main(String[] args) throws FileNotFoundException, IOException {
+        // instantiate a scanner object
         Scanner scan;
 
-        // use fileinputstream to read the excel file
-        FileInputStream dataFile = new FileInputStream(new File(
-                "C:\\Users\\victw\\CTIS310\\goodreadsguiproject\\goodreadsguiproject\\src\\main\\resources\\edu\\guilford\\sample_of_goodreads_data_final_project.xlsx"));
+        // use fileinputstream to read the excel file from the resources folder in the
+        // resources folder for this project using getResource method
+        FileInputStream dataFile = new FileInputStream(
+                new File(
+                        "C:\\Users\\victw\\CTIS310\\goodreadsguiproject\\goodreadsguiproject\\src\\main\\resources\\edu\\guilford\\sample_of_goodreads_data_final_project.xlsx"));
 
         XSSFWorkbook wb = new XSSFWorkbook(dataFile);
 
@@ -121,6 +112,14 @@ public class BookMain extends Application {
             // System.out.println(books.get(0));
             // System.out.println("\nThe size of the list is " + books.size());
         }
+        // Instantiate a VBox root mode
+        VBox root = new VBox();
+
+        // Instantiate a BookPanel object and add it to the root node
+        root.getChildren().add(new BookPanel(books));
+        scene = new Scene(root, 1000, 800);
+        stage.setScene(scene);
+        stage.show();
 
         // // use Stage to create the GUI
         // Stage bookWindow = new Stage();
@@ -128,8 +127,12 @@ public class BookMain extends Application {
         // bookWindow.show();
 
         // // instantiate the BookPanel
-        // BookPanelNetBeans bookDisplay = new BookPanelNetBeans();
+        // BookPanel bookDisplay = new BookPanel(books);
         // bookWindow.setScene(bookDisplay.getScene());
         // bookWindow.show();
+    }
+
+    public static void main(String[] args) throws FileNotFoundException, IOException {
+        launch();
     }
 }
