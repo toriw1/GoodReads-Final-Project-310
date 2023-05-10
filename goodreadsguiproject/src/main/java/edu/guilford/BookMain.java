@@ -165,6 +165,7 @@ public class BookMain extends Application {
 
         // Instantiate a BookPanel object and add it to the root node
         root.getChildren().add(new BookPanel(books));
+        stage.setTitle("GoodReads Data GUI");
         scene = new Scene(root, 1000, 300);
         stage.setScene(scene);
         stage.show();
