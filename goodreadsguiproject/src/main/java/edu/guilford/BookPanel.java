@@ -361,9 +361,6 @@ public class BookPanel extends GridPane {
         updateBookList();
     }
 
-    private void setOnActionListener(ActionEvent actionEvent) {
-    }
-
     private void forwardButtonActionPerformed(ActionEvent actionEvent) {// GEN-FIRST:event_forwardButtonActionPerformed
         // TODO add your handling code here:
         bookList = bookList + 1;
@@ -385,15 +382,6 @@ public class BookPanel extends GridPane {
         }
         updateBookList();
     }// GEN-LAST:event_backwardButtonActionPerformed
-
-    private void bookSliderStateChanged(ActionEvent actionEvent) {// GEN-FIRST:event_bookSliderStateChanged
-        // get the value of the slider
-        int sliderValue = (int) bookSlider.getValue();
-        // set the value of the slider to the bookList
-        bookList = sliderValue;
-        // update the book list
-        updateBookList();
-    }// GEN-LAST:event_bookSliderStateChanged
 
     private void boldTitleActionPerformed(ActionEvent actionEvent) {// GEN-FIRST:event_boldTitleActionPerformed
         // TODO add your handling code here:

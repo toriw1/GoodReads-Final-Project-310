@@ -5,8 +5,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.ArrayList;
-import java.util.Scanner;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.FormulaEvaluator;
 import org.apache.poi.ss.usermodel.Row;
@@ -25,14 +25,14 @@ public class BookMain extends Application {
     @Override
     public void start(Stage stage) throws IOException, URISyntaxException {
 
-        // instantiate a scanner object
-        Scanner scan;
+        // instantiate a class loader object for book main
+        ClassLoader classLoader = BookMain.class.getClassLoader();
 
-        // use fileinputstream to read the excel file from the resources folder in the
-        // resources folder for this project using getResource method
-        FileInputStream dataFile = new FileInputStream(
-                new File(
-                    "C:\\Users\\victw\\CTIS310\\goodreadsguiproject\\goodreadsguiproject\\src\\main\\resources\\edu\\guilford\\good_reads_data_for_final_project.xlsx"));
+        // instantiate a string for the path to the excel file
+        String excelFilePath = "good_reads_data_for_final_project.xlsx";
+
+        // instantiate a file object for the excel file
+        FileInputStream dataFile = new FileInputStream(new File(classLoader.getResource(excelFilePath).getFile()));
 
         XSSFWorkbook wb = new XSSFWorkbook(dataFile);
 
