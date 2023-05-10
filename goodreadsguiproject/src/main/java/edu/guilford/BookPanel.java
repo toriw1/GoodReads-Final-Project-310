@@ -24,6 +24,9 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.scene.control.Label;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -40,6 +43,7 @@ public class BookPanel extends GridPane {
 
     private int bookList;
     private String format = "All";
+    private double bookRating = 0.0;
     private Color fontColor = Color.WHITE;
     private FontWeight fontWeight = FontWeight.NORMAL;
     private String fontStyle = "Georgia";
@@ -77,31 +81,39 @@ public class BookPanel extends GridPane {
 
         boldButtonGroup = new ToggleGroup();
         formatButtonGroup = new ToggleGroup();
+
         listOfBooksScroll = new ScrollPane();
         listOfBooks = new TextArea();
+
         forwardButton = new Button();
         backwardButton = new Button();
+
         bookSlider = new Slider();
+
         bookRatingLabel = new Label();
         bookTitleLabel = new Label();
         authorLabel = new Label();
-        ;
         pagesLabel = new Label();
         totalRatingsLabel = new Label();
+        sliderLabel = new Label();
+        formatLabel = new Label();
+
+        noneBoldButton = new RadioButton();
         boldTitle = new RadioButton();
         boldAuthor = new RadioButton();
         boldStarRating = new RadioButton();
         boldPageNumber = new RadioButton();
         boldTotalRatings = new RadioButton();
-        sliderLabel = new Label();
-        formatLabel = new Label();
         boldFormat = new RadioButton();
+
         paperbackButton = new RadioButton();
         hardcoverButton = new RadioButton();
         ebookButton = new RadioButton();
         audiobookButton = new RadioButton();
         allButton = new RadioButton();
-        noneBoldButton = new RadioButton();
+
+        menuBar = new MenuBar();
+        ratingMenu = new Menu();
 
         // set background color of the panel for javafx
         this.setStyle("-fx-background-color: hotpink;");
@@ -112,7 +124,8 @@ public class BookPanel extends GridPane {
         this.getColumnConstraints().add(2, new ColumnConstraints(150));
         this.getColumnConstraints().add(3, new ColumnConstraints(150));
         this.getColumnConstraints().add(4, new ColumnConstraints(150));
-        this.getColumnConstraints().add(5, new ColumnConstraints(150));
+        this.getColumnConstraints().add(5, new ColumnConstraints(50));
+        this.getColumnConstraints().add(6, new ColumnConstraints(100));
 
         listOfBooks.setEditable(false);
         listOfBooks.setPrefColumnCount(23);
@@ -393,6 +406,28 @@ public class BookPanel extends GridPane {
         });
         // add none bold button to the gridpane
         this.add(noneBoldButton, 0, 11, 2, 1);
+
+        // rating menu
+        ratingMenu.setText("Rating");
+        // add rating menu to the menu bar
+        menuBar.getMenus().add(ratingMenu);
+        // add menu bar to the gridpane
+        this.add(menuBar, 6, 0, 2, 1);
+        // create a 5 Star menu item
+        MenuItem fiveStar = new MenuItem("5 Star");
+        // add the 4 Star menu item to the rating menu
+        ratingMenu.getItems().add(fiveStar);
+        // add an action listener to the 5 Star menu item
+        fiveStar.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                fiveStarActionPerformed(actionEvent);
+            }
+
+            // private void fiveStarActionPerformed(ActionEvent actionEvent) {
+            // }
+        });
+
     }
 
     /*
@@ -419,6 +454,18 @@ public class BookPanel extends GridPane {
         bookList = bookList + 1;
         if (!format.equals("All")) {
             while (!books.get(bookList).getBookFormat().equals(format)) {
+                // check the size of the book list so that it doesn't go out of bounds
+                if (bookList == books.size() - 1) {
+                    bookList = 0;
+                } else {
+                    bookList = bookList + 1;
+                }
+            }
+        }
+        updateBookList();
+        // add code for the five star menu item
+        if (bookRating != 5.0) {
+            while (books.get(bookList).getBookRating() == bookRating) {
                 // check the size of the book list so that it doesn't go out of bounds
                 if (bookList == books.size() - 1) {
                     bookList = 0;
@@ -865,6 +912,13 @@ public class BookPanel extends GridPane {
         updateBookList();
     }// GEN-LAST:event_allButtonActionPerformed
 
+    private void fiveStarActionPerformed(ActionEvent actionEvent) {// GEN-FIRST:event_fiveStarActionPerformed
+        // TODO add your handling code here:
+        // if the 5 star menu item is selected, only display the books in the list with a star rating of 5
+        bookRating = 5.0;
+        updateBookList();
+    }
+
     /*
      * This is an action performed method for the BookPanel class.
      * This method changes the state of the book list.
@@ -931,5 +985,7 @@ public class BookPanel extends GridPane {
     private Label sliderLabel;
     private Label totalRatingsLabel;
     private RadioButton noneBoldButton;
+    private MenuBar menuBar;
+    private Menu ratingMenu;
     // End of variables declaration//GEN-END:variables
 }
