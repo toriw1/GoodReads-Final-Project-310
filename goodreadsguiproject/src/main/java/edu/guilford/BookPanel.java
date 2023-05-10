@@ -250,11 +250,10 @@ public class BookPanel extends GridPane {
 
         sliderLabel.setFont(new Font("Georgia", 16));
         sliderLabel.setStyle("-fx-text-fill: white;");
-        sliderLabel.setText("Slider out of 1000: ");
+        sliderLabel.setText("Slide to choose a book out of 1000: ");
         // add slider label to the gridpane
-        this.add(sliderLabel, 0, 8, 2, 1);
+        this.add(sliderLabel, 0, 8, 3, 1);
 
-        // formatLabel.setStyle("-fx-background-color: #FFCCCC;");
         formatLabel.setFont(new Font("Georgia", 14));
         formatLabel.setStyle("-fx-text-fill: white;");
         formatLabel.setText("Format: ");
