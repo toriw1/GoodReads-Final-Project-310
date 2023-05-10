@@ -74,9 +74,10 @@ public class BookPanel extends GridPane {
         ebookButton = new RadioButton();
         audiobookButton = new RadioButton();
         allButton = new RadioButton();
+        noneBoldButton = new RadioButton();
 
         // set background color of the panel for javafx
-        this.setStyle("-fx-background-color: deeppink;");
+        this.setStyle("-fx-background-color: hotpink;");
 
         // column constraints
         this.getColumnConstraints().add(0, new ColumnConstraints(100));
@@ -174,7 +175,6 @@ public class BookPanel extends GridPane {
 
         boldTitle.setFont(new Font("Georgia", 12));
         boldTitle.setToggleGroup(boldButtonGroup);
-        boldTitle.setSelected(true);
         boldTitle.setText("Bold Title");
         boldTitle.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -186,7 +186,7 @@ public class BookPanel extends GridPane {
             // }
         });
         // add bold title button to the gridpane
-        this.add(boldTitle, 0, 11, 2, 1);
+        this.add(boldTitle, 0, 12, 2, 1);
 
         boldAuthor.setFont(new Font("Georgia", 12));
         boldAuthor.setToggleGroup(boldButtonGroup);
@@ -201,7 +201,7 @@ public class BookPanel extends GridPane {
             // }
         });
         // add bold author button to the gridpane
-        this.add(boldAuthor, 0, 12, 2, 1);
+        this.add(boldAuthor, 0, 13, 2, 1);
 
         boldStarRating.setFont(new Font("Georgia", 12));
         boldStarRating.setToggleGroup(boldButtonGroup);
@@ -231,7 +231,7 @@ public class BookPanel extends GridPane {
             // }
         });
         // add bold page number button to the gridpane
-        this.add(boldPageNumber, 0, 13, 2, 1);
+        this.add(boldPageNumber, 0, 14, 2, 1);
 
         boldTotalRatings.setFont(new Font("Georgia", 12));
         boldTotalRatings.setToggleGroup(boldButtonGroup);
@@ -350,6 +350,22 @@ public class BookPanel extends GridPane {
         });
         // add all button to the gridpane
         this.add(allButton, 3, 11);
+
+        noneBoldButton.setFont(new Font("Georgia", 12));
+        noneBoldButton.setToggleGroup(boldButtonGroup);
+        noneBoldButton.setSelected(true);
+        noneBoldButton.setText("None Bold");
+        noneBoldButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                noneBoldButtonActionPerformed(actionEvent);
+            }
+
+            // private void boldFormatActionPerformed(ActionEvent actionEvent) {
+            // }
+        });
+        // add none bold button to the gridpane
+        this.add(noneBoldButton, 0, 11, 2, 1);
     }
 
     private void bookSliderStateChanged(ObservableValue<? extends Number> observableValue) {
@@ -366,7 +382,12 @@ public class BookPanel extends GridPane {
         bookList = bookList + 1;
         if (!format.equals("All")) {
             while (!books.get(bookList).getBookFormat().equals(format)) {
-                bookList = bookList + 1;
+                // check the size of the book list so that it doesn't go out of bounds
+                if (bookList == books.size() - 1) {
+                    bookList = 0;
+                } else {
+                    bookList = bookList + 1;
+                }
             }
         }
         updateBookList();
@@ -377,7 +398,12 @@ public class BookPanel extends GridPane {
         bookList = bookList - 1;
         if (!format.equals("All")) {
             while (!books.get(bookList).getBookFormat().equals(format)) {
-                bookList = bookList - 1;
+                // check the size of the book list so that it doesn't go out of bounds
+                if (bookList == 0) {
+                    bookList = books.size() - 1;
+                } else {
+                    bookList = bookList - 1;
+                }
             }
         }
         updateBookList();
@@ -683,7 +709,28 @@ public class BookPanel extends GridPane {
             totalRatingsLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
             totalRatingsLabel.setStyle("-fx-text-fill: white;");
         }
-    }// GEN-LAST:event_boldFormatActionPerformed
+    }
+        private void noneBoldButtonActionPerformed(ActionEvent actionEvent) {
+            // TODO add your handling code here:
+            // if this button is selected, make all the labels font color white, and weight normal
+            if (noneBoldButton.isSelected()) {
+            fontWeight = FontWeight.NORMAL;
+            fontColor = Color.WHITE;
+            bookTitleLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
+            bookTitleLabel.setStyle("-fx-text-fill: white;");
+            authorLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
+            authorLabel.setStyle("-fx-text-fill: white;");
+            bookRatingLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
+            bookRatingLabel.setStyle("-fx-text-fill: white;");
+            pagesLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
+            pagesLabel.setStyle("-fx-text-fill: white;");
+            totalRatingsLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
+            totalRatingsLabel.setStyle("-fx-text-fill: white;");
+            formatLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
+            formatLabel.setStyle("-fx-text-fill: white;");
+        }// GEN-LAST:event_boldFormatActionPerformed
+    }
+
 
     private void paperbackButtonActionPerformed(ActionEvent actionEvent) {// GEN-FIRST:event_paperbackButtonActionPerformed
         // TODO add your handling code here:
@@ -775,5 +822,6 @@ public class BookPanel extends GridPane {
     private RadioButton paperbackButton;
     private Label sliderLabel;
     private Label totalRatingsLabel;
+    private RadioButton noneBoldButton;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.net.URL;
 import java.util.ArrayList;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.FormulaEvaluator;
@@ -117,7 +116,7 @@ public class BookMain extends Application {
 
         // Instantiate a BookPanel object and add it to the root node
         root.getChildren().add(new BookPanel(books));
-        scene = new Scene(root, 1000, 800);
+        scene = new Scene(root, 1000, 300);
         stage.setScene(scene);
         stage.show();
 
