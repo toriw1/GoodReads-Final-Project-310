@@ -48,31 +48,31 @@ public class BookPanel extends GridPane {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ToggleGroup boldButtonGroup = new ToggleGroup();
-        ToggleGroup formatButtonGroup = new ToggleGroup();
-        ScrollPane listOfBooksScroll = new ScrollPane();
-        TextArea listOfBooks = new TextArea();
-        Button forwardButton = new Button();
-        Button backwardButton = new Button();
-        Slider bookSlider = new Slider();
-        Label bookRatingLabel = new Label();
-        Label bookTitleLabel = new Label();
-        Label authorLabel = new Label();;
-        Label pagesLabel = new Label();
-        Label totalRatingsLabel = new Label();
-        RadioButton boldTitle = new RadioButton();
-        RadioButton boldAuthor = new RadioButton();
-        RadioButton boldStarRating = new RadioButton();
-        RadioButton boldPageNumber = new RadioButton();
-        RadioButton boldTotalRatings = new RadioButton();
-        Label sliderLabel = new Label();
-        Label formatLabel = new Label();
-        RadioButton boldFormat = new RadioButton();
-        RadioButton paperbackButton = new RadioButton();
-        RadioButton hardcoverButton = new RadioButton();
-        RadioButton ebookButton = new RadioButton();
-        RadioButton audiobookButton = new RadioButton();
-        RadioButton allButton = new RadioButton();
+        boldButtonGroup = new ToggleGroup();
+        formatButtonGroup = new ToggleGroup();
+        listOfBooksScroll = new ScrollPane();
+        listOfBooks = new TextArea();
+        forwardButton = new Button();
+        backwardButton = new Button();
+        bookSlider = new Slider();
+        bookRatingLabel = new Label();
+        bookTitleLabel = new Label();
+        authorLabel = new Label();;
+        pagesLabel = new Label();
+        totalRatingsLabel = new Label();
+        boldTitle = new RadioButton();
+        boldAuthor = new RadioButton();
+        boldStarRating = new RadioButton();
+        boldPageNumber = new RadioButton();
+        boldTotalRatings = new RadioButton();
+        sliderLabel = new Label();
+        formatLabel = new Label();
+        boldFormat = new RadioButton();
+        paperbackButton = new RadioButton();
+        hardcoverButton = new RadioButton();
+        ebookButton = new RadioButton();
+        audiobookButton = new RadioButton();
+        allButton = new RadioButton();
 
 
         // set background color of the panel for javafx
@@ -114,8 +114,8 @@ public class BookPanel extends GridPane {
                 forwardButtonActionPerformed(actionEvent);
             }
 
-            private void forwardButtonActionPerformed(ActionEvent actionEvent) {
-            }
+            // private void forwardButtonActionPerformed(ActionEvent actionEvent) {
+            // }
         });
         // add forward button to the gridpane
         this.add(forwardButton, 1, 9);
@@ -130,8 +130,8 @@ public class BookPanel extends GridPane {
                 backwardButtonActionPerformed(actionEvent);
             }
 
-            private void backwardButtonActionPerformed(ActionEvent actionEvent) {
-            }
+            // private void backwardButtonActionPerformed(ActionEvent actionEvent) {
+            // }
         });
         // add backward button to the gridpane
         this.add(backwardButton, 0, 9);
@@ -154,34 +154,34 @@ public class BookPanel extends GridPane {
         this.add(bookSlider, 3, 9, 2, 1);
 
         bookRatingLabel.setFont(new Font("Georgia", 14));
-        bookRatingLabel.setStyle("-fx-text-fill: #666667;");
+        bookRatingLabel.setStyle("-fx-text-fill: white;");
         bookRatingLabel.setText("Star Rating: ");
         // add book rating label to the gridpane
-        this.add(bookRatingLabel, 0, 3);
+        this.add(bookRatingLabel, 0, 3, 2, 1);
 
         bookTitleLabel.setFont(new Font("Georgia", 14));
-        bookTitleLabel.setStyle("-fx-text-fill: #666667;");
+        bookTitleLabel.setStyle("-fx-text-fill: white;");
         bookTitleLabel.setText("Title: ");
         // add book title label to the gridpane
-        this.add(bookTitleLabel, 0, 0);
+        this.add(bookTitleLabel, 0, 0, 3, 1);
 
         authorLabel.setFont(new Font("Georgia", 14));
-        authorLabel.setStyle("-fx-text-fill: #666667;");
+        authorLabel.setStyle("-fx-text-fill: white;");
         authorLabel.setText("Author: ");
         // add author label to the gridpane
-        this.add(authorLabel, 0, 1);
+        this.add(authorLabel, 0, 1, 3, 1);
 
         pagesLabel.setFont(new Font("Georgia", 14));
-        pagesLabel.setStyle("-fx-text-fill: #666667;");
+        pagesLabel.setStyle("-fx-text-fill: white;");
         pagesLabel.setText("Page Count: ");
         // add page count label to the gridpane
-        this.add(pagesLabel, 0, 2);
+        this.add(pagesLabel, 0, 2, 2, 1);
 
         totalRatingsLabel.setFont(new Font("Georgia", 14));
-        totalRatingsLabel.setStyle("-fx-text-fill: #666667;");
+        totalRatingsLabel.setStyle("-fx-text-fill: white;");
         totalRatingsLabel.setText("Total Ratings: ");
         // add total ratings label to the gridpane
-        this.add(totalRatingsLabel, 0, 4);
+        this.add(totalRatingsLabel, 0, 4, 2, 1);
 
         boldTitle.setStyle("-fx-background-color: #FFCCCC;");
         boldTitle.setFont(new Font("Georgia", 12));
@@ -195,11 +195,11 @@ public class BookPanel extends GridPane {
                 boldTitleActionPerformed(actionEvent);
             }
 
-            private void boldTitleActionPerformed(ActionEvent actionEvent) {
-            }
+            // private void boldTitleActionPerformed(ActionEvent actionEvent) {
+            // }
         });
         // add bold title button to the gridpane
-        this.add(boldTitle, 2, 11, 2, 1);
+        this.add(boldTitle, 0, 11, 2, 1);
 
         boldAuthor.setStyle("-fx-background-color: #FFCCCC;");
         boldAuthor.setFont(new Font("Georgia", 12));
@@ -212,8 +212,8 @@ public class BookPanel extends GridPane {
                 boldAuthorActionPerformed(actionEvent);
             }
 
-            private void boldAuthorActionPerformed(ActionEvent actionEvent) {
-            }
+            // private void boldAuthorActionPerformed(ActionEvent actionEvent) {
+            // }
         });
         // add bold author button to the gridpane
         this.add(boldAuthor, 0, 12, 2, 1);
@@ -229,25 +229,25 @@ public class BookPanel extends GridPane {
                 boldStarRatingActionPerformed(actionEvent);
             }
 
-            private void boldStarRatingActionPerformed(ActionEvent actionEvent) {
-            }
+            // private void boldStarRatingActionPerformed(ActionEvent actionEvent) {
+            // }
         });
         // add bold star rating button to the gridpane
-        this.add(boldStarRating, 2, 12, 2, 1);
+        this.add(boldStarRating, 2, 11, 2, 1);
 
         boldPageNumber.setStyle("-fx-background-color: #FFCCCC;");
         boldPageNumber.setFont(new Font("Georgia", 12));
         boldPageNumber.setStyle("-fx-foreground-color: #FFCCCC;");
         boldPageNumber.setToggleGroup(boldButtonGroup);
-        boldPageNumber.setText("Bold Page Number");
+        boldPageNumber.setText("Bold Page Count");
         boldPageNumber.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 boldPageNumberActionPerformed(actionEvent);
             }
 
-            private void boldPageNumberActionPerformed(ActionEvent actionEvent) {
-            }
+            // private void boldPageNumberActionPerformed(ActionEvent actionEvent) {
+            // }
         });
         // add bold page number button to the gridpane
         this.add(boldPageNumber, 0, 13, 2, 1);
@@ -263,11 +263,11 @@ public class BookPanel extends GridPane {
                 boldTotalRatingsActionPerformed(actionEvent);
             }
 
-            private void boldTotalRatingsActionPerformed(ActionEvent actionEvent) {
-            }
+            // private void boldTotalRatingsActionPerformed(ActionEvent actionEvent) {
+            // }
         });
         // add bold total ratings button to the gridpane
-        this.add(boldTotalRatings, 2, 13, 2, 1);
+        this.add(boldTotalRatings, 2, 12, 2, 1);
     
 
         sliderLabel.setStyle("-fx-background-color: #FFCCCC;");
@@ -279,10 +279,10 @@ public class BookPanel extends GridPane {
 
         formatLabel.setStyle("-fx-background-color: #FFCCCC;");
         formatLabel.setFont(new Font("Georgia", 14));
-        formatLabel.setStyle("-fx-text-fill: #666667;");
+        formatLabel.setStyle("-fx-text-fill: white;");
         formatLabel.setText("Format: ");
         // add format label to the gridpane
-        this.add(formatLabel, 0, 5);
+        this.add(formatLabel, 0, 5, 2, 1);
 
         boldFormat.setStyle("-fx-background-color: #FFCCCC;");
         boldFormat.setFont(new Font("Georgia", 12));
@@ -295,11 +295,11 @@ public class BookPanel extends GridPane {
                 boldFormatActionPerformed(actionEvent);
             }
 
-            private void boldFormatActionPerformed(ActionEvent actionEvent) {
-            }
+            // private void boldFormatActionPerformed(ActionEvent actionEvent) {
+            // }
         });
         // add bold format button to the gridpane
-        this.add(boldFormat, 0, 14, 2, 1);
+        this.add(boldFormat, 2, 13, 2, 1);
 
         paperbackButton.setStyle("-fx-background-color: #FFCCCC;");
         paperbackButton.setFont(new Font("Georgia", 12));
@@ -312,11 +312,11 @@ public class BookPanel extends GridPane {
                 paperbackButtonActionPerformed(actionEvent);
             }
 
-            private void paperbackButtonActionPerformed(ActionEvent actionEvent) {
-            }
+            // private void paperbackButtonActionPerformed(ActionEvent actionEvent) {
+            // }
         });
         // add paperback button to the gridpane
-        this.add(paperbackButton, 4, 12);
+        this.add(paperbackButton, 3, 12);
 
         hardcoverButton.setStyle("-fx-background-color: #FFCCCC;");
         hardcoverButton.setFont(new Font("Georgia", 12));
@@ -329,11 +329,11 @@ public class BookPanel extends GridPane {
                 hardcoverButtonActionPerformed(actionEvent);
             }
 
-            private void hardcoverButtonActionPerformed(ActionEvent actionEvent) {
-            }
+            // private void hardcoverButtonActionPerformed(ActionEvent actionEvent) {
+            // }
         });
         // add hardcover button to the gridpane
-        this.add(hardcoverButton, 4, 11);
+        this.add(hardcoverButton, 3, 13);
 
         ebookButton.setStyle("-fx-background-color: #FFCCCC;");
         ebookButton.setFont(new Font("Georgia", 12));
@@ -346,11 +346,11 @@ public class BookPanel extends GridPane {
                 ebookButtonActionPerformed(actionEvent);
             }
 
-            private void ebookButtonActionPerformed(ActionEvent actionEvent) {
-            }
+            // private void ebookButtonActionPerformed(ActionEvent actionEvent) {
+            // }
         });
         // add ebook button to the gridpane
-        this.add(ebookButton, 3, 11);
+        this.add(ebookButton, 4, 12);
 
         audiobookButton.setStyle("-fx-background-color: #FFCCCC;");
         audiobookButton.setFont(new Font("Georgia", 12));
@@ -363,11 +363,11 @@ public class BookPanel extends GridPane {
                 audiobookButtonActionPerformed(actionEvent);
             }
 
-            private void audiobookButtonActionPerformed(ActionEvent actionEvent) {
-            }
+            // private void audiobookButtonActionPerformed(ActionEvent actionEvent) {
+            // }
         });
         // add audiobook button to the gridpane
-        this.add(audiobookButton, 3, 12);
+        this.add(audiobookButton, 4, 11);
 
         allButton.setStyle("-fx-background-color: #FFCCCC;");
         allButton.setFont(new Font("Georgia", 12));
@@ -381,18 +381,18 @@ public class BookPanel extends GridPane {
                 allButtonActionPerformed(actionEvent);
             }
 
-            private void allButtonActionPerformed(ActionEvent actionEvent) {
-            }
+            // private void allButtonActionPerformed(ActionEvent actionEvent) {
+            // }
         });
         // add all button to the gridpane
-        this.add(allButton, 0, 11);
+        this.add(allButton, 3, 11);
     }
 
     private void bookSliderStateChanged(ObservableValue<? extends Number> observableValue) {
     }
 
-    // private void setOnActionListener(ActionEvent actionEvent) {
-    // }
+    private void setOnActionListener(ActionEvent actionEvent) {
+    }
 
     private void forwardButtonActionPerformed(ActionEvent actionEvent) {//GEN-FIRST:event_forwardButtonActionPerformed
         // TODO add your handling code here:
@@ -417,8 +417,11 @@ public class BookPanel extends GridPane {
     }//GEN-LAST:event_backwardButtonActionPerformed
 
     private void bookSliderStateChanged(ActionEvent actionEvent) {//GEN-FIRST:event_bookSliderStateChanged
-        // TODO add your handling code here:
-        // bookList = bookSlider.getValue();
+        // get the value of the slider
+        int sliderValue = (int) bookSlider.getValue();
+        // set the value of the slider to the bookList
+        bookList = sliderValue;
+        // update the book list
         updateBookList();
     }//GEN-LAST:event_bookSliderStateChanged
 
@@ -428,9 +431,8 @@ public class BookPanel extends GridPane {
         fontColor = Color.WHITE;
         if (boldTitle.isSelected()) {
             fontWeight = FontWeight.BOLD;
-            fontColor = Color.DARKGREY;
             bookTitleLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            bookTitleLabel.setTextFill(fontColor);
+            bookTitleLabel.setStyle("-fx-text-fill: #666667;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -439,7 +441,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             authorLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            authorLabel.setTextFill(fontColor);
+            authorLabel.setStyle("-fx-text-fill: white;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -448,7 +450,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             bookRatingLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            bookRatingLabel.setTextFill(fontColor);
+            bookRatingLabel.setStyle("-fx-text-fill: white;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -457,7 +459,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             pagesLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            pagesLabel.setTextFill(fontColor);
+            pagesLabel.setStyle("-fx-text-fill: white;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -466,7 +468,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             totalRatingsLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            totalRatingsLabel.setTextFill(fontColor);
+            totalRatingsLabel.setStyle("-fx-text-fill: white;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -475,7 +477,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             formatLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            formatLabel.setTextFill(fontColor);
+            formatLabel.setStyle("-fx-text-fill: white;");
         }
     }//GEN-LAST:event_boldTitleActionPerformed
 
@@ -486,7 +488,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.BOLD;
             fontColor = Color.DARKGREY;
             authorLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            authorLabel.setTextFill(fontColor);
+            authorLabel.setStyle("-fx-text-fill: #666667;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -495,7 +497,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             bookTitleLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            bookTitleLabel.setTextFill(fontColor);
+            bookTitleLabel.setStyle("-fx-text-fill: white;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -504,7 +506,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             bookRatingLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            bookRatingLabel.setTextFill(fontColor);
+            bookRatingLabel.setStyle("-fx-text-fill: white;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -513,7 +515,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             pagesLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            pagesLabel.setTextFill(fontColor);
+            pagesLabel.setStyle("-fx-text-fill: white;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -522,7 +524,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             totalRatingsLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            totalRatingsLabel.setTextFill(fontColor);
+            totalRatingsLabel.setStyle("-fx-text-fill: white;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -531,19 +533,18 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             formatLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            formatLabel.setTextFill(fontColor);
+            formatLabel.setStyle("-fx-text-fill: white;");
         }
     }//GEN-LAST:event_boldAuthorActionPerformed
 
     private void boldStarRatingActionPerformed(ActionEvent actionEvent) {//GEN-FIRST:event_boldStarRatingActionPerformed
-        
         fontWeight = FontWeight.NORMAL;
         fontColor = Color.WHITE;
         if (boldStarRating.isSelected()) {
             fontWeight = FontWeight.BOLD;
             fontColor = Color.DARKGREY;
             bookRatingLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            bookRatingLabel.setTextFill(fontColor);
+            bookRatingLabel.setStyle("-fx-text-fill: #666667;");
         }
         
         fontWeight = FontWeight.BOLD;
@@ -552,7 +553,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             authorLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            authorLabel.setTextFill(fontColor);
+            authorLabel.setStyle("-fx-text-fill: white;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -561,7 +562,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             bookTitleLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            bookTitleLabel.setTextFill(fontColor);
+            bookTitleLabel.setStyle("-fx-text-fill: white;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -570,7 +571,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             pagesLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            pagesLabel.setTextFill(fontColor);
+            pagesLabel.setStyle("-fx-text-fill: white;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -579,7 +580,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             totalRatingsLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            totalRatingsLabel.setTextFill(fontColor);
+            totalRatingsLabel.setStyle("-fx-text-fill: white;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -588,7 +589,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             formatLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            formatLabel.setTextFill(fontColor);
+            formatLabel.setStyle("-fx-text-fill: white;");
         }
 
     }//GEN-LAST:event_boldStarRatingActionPerformed
@@ -598,9 +599,8 @@ public class BookPanel extends GridPane {
         fontColor = Color.WHITE;
         if (boldStarRating.isSelected()) {
             fontWeight = FontWeight.BOLD;
-            fontColor = Color.DARKGREY;
             pagesLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            pagesLabel.setTextFill(fontColor);
+            pagesLabel.setStyle("-fx-text-fill: #666667;");
         }
 
 
@@ -610,7 +610,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             authorLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            authorLabel.setTextFill(fontColor);
+            authorLabel.setStyle("-fx-text-fill: white;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -619,7 +619,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             bookRatingLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            bookRatingLabel.setTextFill(fontColor);
+            bookRatingLabel.setStyle("-fx-text-fill: white;");
         }
         
         fontWeight = FontWeight.BOLD;
@@ -628,7 +628,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             bookTitleLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            bookTitleLabel.setTextFill(fontColor);
+            bookTitleLabel.setStyle("-fx-text-fill: white;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -637,7 +637,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             totalRatingsLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            totalRatingsLabel.setTextFill(fontColor);
+            totalRatingsLabel.setStyle("-fx-text-fill: white;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -646,7 +646,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             formatLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            formatLabel.setTextFill(fontColor);
+            formatLabel.setStyle("-fx-text-fill: white;");
         }
     }//GEN-LAST:event_boldPageNumberActionPerformed
 
@@ -657,7 +657,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.BOLD;
             fontColor = Color.DARKGREY;
             totalRatingsLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            totalRatingsLabel.setTextFill(fontColor);
+            totalRatingsLabel.setStyle("-fx-text-fill: #666667;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -666,7 +666,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             authorLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            authorLabel.setTextFill(fontColor);
+            authorLabel.setStyle("-fx-text-fill: white;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -675,7 +675,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             bookRatingLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            bookRatingLabel.setTextFill(fontColor);
+            bookRatingLabel.setStyle("-fx-text-fill: white;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -684,7 +684,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             bookTitleLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            bookTitleLabel.setTextFill(fontColor);
+            bookTitleLabel.setStyle("-fx-text-fill: white;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -693,7 +693,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             pagesLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            pagesLabel.setTextFill(fontColor);
+            pagesLabel.setStyle("-fx-text-fill: white;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -702,7 +702,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             formatLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            formatLabel.setTextFill(fontColor);
+            formatLabel.setStyle("-fx-text-fill: white;");
         }
     }//GEN-LAST:event_boldTotalRatingsActionPerformed
 
@@ -713,7 +713,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.BOLD;
             fontColor = Color.DARKGREY;
             formatLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            formatLabel.setTextFill(fontColor);
+            formatLabel.setStyle("-fx-text-fill: #666667;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -722,7 +722,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             authorLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            authorLabel.setTextFill(fontColor);
+            authorLabel.setStyle("-fx-text-fill: white;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -731,7 +731,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             bookRatingLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            bookRatingLabel.setTextFill(fontColor);
+            bookRatingLabel.setStyle("-fx-text-fill: white;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -740,7 +740,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             bookTitleLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            bookTitleLabel.setTextFill(fontColor);
+            bookTitleLabel.setStyle("-fx-text-fill: white;");
         }
 
         fontWeight = FontWeight.BOLD;
@@ -749,7 +749,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             pagesLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            pagesLabel.setTextFill(fontColor);
+            pagesLabel.setStyle("-fx-text-fill: white;");
         }
 
         
@@ -759,7 +759,7 @@ public class BookPanel extends GridPane {
             fontWeight = FontWeight.NORMAL;
             fontColor = Color.WHITE;
             totalRatingsLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
-            totalRatingsLabel.setTextFill(fontColor);
+            totalRatingsLabel.setStyle("-fx-text-fill: white;");
         }
     }//GEN-LAST:event_boldFormatActionPerformed
 
