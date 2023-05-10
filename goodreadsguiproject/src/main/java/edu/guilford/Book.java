@@ -28,6 +28,7 @@ public class Book {
     private String title;
     private int pageNumber;
     private double bookRating;
+    private double userRating;
     private int reviewAmount;
     private int totalRatings;
     
@@ -209,6 +210,27 @@ public class Book {
      */
     public void setBookRating(double bookRating) {
         this.bookRating = bookRating;
+    }
+
+    /**
+     * This is the getter for the userRating attribute.
+     * 
+     * @return userRating
+     * 
+     */
+    public double getUserRating() {
+        return userRating;
+    }
+
+    /**
+     * This is the setter for the userRating attribute.
+     * 
+     * @param userRating 
+     * 
+     */
+
+    public void setUserRating(double userRating) {
+        this.userRating = userRating;
     }
 
     /**
