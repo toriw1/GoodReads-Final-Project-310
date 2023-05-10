@@ -248,8 +248,7 @@ public class BookPanel extends GridPane {
         // add bold total ratings button to the gridpane
         this.add(boldTotalRatings, 2, 12, 2, 1);
 
-        sliderLabel.setFont(new Font("Georgia", 14));
-        sliderLabel.setStyle("-fx-font-weight: bold;");
+        sliderLabel.setFont(new Font("Georgia", 16));
         sliderLabel.setStyle("-fx-text-fill: white;");
         sliderLabel.setText("Slider out of 1000: ");
         // add slider label to the gridpane
