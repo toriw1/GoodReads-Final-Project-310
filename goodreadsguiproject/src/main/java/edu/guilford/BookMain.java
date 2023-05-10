@@ -1,5 +1,17 @@
 package edu.guilford;
 
+/**
+ * This class is the Book class. It contains the attributes of a book, the
+ * constructor, and the getters and setters for the attributes.
+ * 
+ * This is where the window for BookPanel is created.
+ * It also contains the FIleStreamInput method to read the excel file.
+ * 
+ * @author Tori Williams
+ * @version 1.0
+ * @since 11/2022
+ * 
+ */
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -17,13 +29,38 @@ import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+/**
+ * This class is the BookMain class. It contains the start method for the GUI and reads the excel file.
+ * It also contains the main method, which launches the start method.
+ * 
+ * @param scene
+ * @param args
+ * @throws IOException
+ * @throws URISyntaxException
+ * @throws FileNotFoundException
+ * 
+ */
 public class BookMain extends Application {
 
+    /*
+     * This is the scene for the GUI.
+     */
     private static Scene scene;
 
+    /**
+     * This is the start method for the GUI. It reads the excel file and creates the window for the GUI.
+     * 
+     * @param stage
+     * @throws IOException
+     * @throws URISyntaxException
+     * 
+     */
     @Override
     public void start(Stage stage) throws IOException, URISyntaxException {
 
+        /*
+         * This is the code to read the excel file.
+         */
         // instantiate a class loader object for book main
         ClassLoader classLoader = BookMain.class.getClassLoader();
 
@@ -111,6 +148,15 @@ public class BookMain extends Application {
             // System.out.println(books.get(0));
             // System.out.println("\nThe size of the list is " + books.size());
         }
+        /*
+         * This is the code to create the window for the GUI.
+         * It also adds the BookPanel to the window.
+         * 
+         * @param root
+         * @param bookWindow
+         * @param bookDisplay
+         * 
+         */
         // Instantiate a VBox root mode
         VBox root = new VBox();
 
@@ -131,6 +177,14 @@ public class BookMain extends Application {
         // bookWindow.show();
     }
 
+    /**
+     * This is the main method. It launches the start method.
+     * 
+     * @param args
+     * @throws FileNotFoundException
+     * @throws IOException
+     * 
+     */
     public static void main(String[] args) throws FileNotFoundException, IOException {
         launch();
     }
