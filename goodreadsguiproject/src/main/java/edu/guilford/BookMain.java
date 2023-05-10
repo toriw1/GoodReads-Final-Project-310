@@ -32,7 +32,7 @@ public class BookMain extends Application {
         // resources folder for this project using getResource method
         FileInputStream dataFile = new FileInputStream(
                 new File(
-                        "C:\\Users\\victw\\CTIS310\\goodreadsguiproject\\goodreadsguiproject\\src\\main\\resources\\edu\\guilford\\sample_of_goodreads_data_final_project.xlsx"));
+                    "C:\\Users\\victw\\CTIS310\\goodreadsguiproject\\goodreadsguiproject\\src\\main\\resources\\edu\\guilford\\good_reads_data_for_final_project.xlsx"));
 
         XSSFWorkbook wb = new XSSFWorkbook(dataFile);
 
