@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.FormulaEvaluator;
+// import org.apache.poi.ss.usermodel.FormulaEvaluator;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -74,7 +74,7 @@ public class BookMain extends Application {
 
         XSSFSheet sheet = wb.getSheetAt(0);
 
-        FormulaEvaluator fmEval = wb.getCreationHelper().createFormulaEvaluator();
+        // FormulaEvaluator fmEval = wb.getCreationHelper().createFormulaEvaluator();
 
         // Be sure to instantiate the books ArrayList before you start reading data from
         // the spreadsheet
@@ -147,6 +147,9 @@ public class BookMain extends Application {
 
             // System.out.println(books.get(0));
             // System.out.println("\nThe size of the list is " + books.size());
+
+            // close the workbook
+            wb.close();
         }
         /*
          * This is the code to create the window for the GUI.

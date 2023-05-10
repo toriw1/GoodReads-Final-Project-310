@@ -11,7 +11,6 @@ package edu.guilford;
  * 
  */
 import java.util.ArrayList;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.control.RadioButton;
@@ -43,8 +42,6 @@ public class BookPanel extends GridPane {
 
     private int bookList;
     private String format = "All";
-    private double bookRating = 0.0;
-    private Color fontColor = Color.WHITE;
     private FontWeight fontWeight = FontWeight.NORMAL;
     private String fontStyle = "Georgia";
     private int fontSize = 14;
@@ -579,7 +576,6 @@ public class BookPanel extends GridPane {
     private void boldTitleActionPerformed(ActionEvent actionEvent) {// GEN-FIRST:event_boldTitleActionPerformed
         // TODO add your handling code here:
         fontWeight = FontWeight.NORMAL;
-        fontColor = Color.WHITE;
         if (boldTitle.isSelected()) {
             fontWeight = FontWeight.BOLD;
             bookTitleLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
@@ -636,7 +632,6 @@ public class BookPanel extends GridPane {
      */
     private void boldAuthorActionPerformed(ActionEvent actionEvent) {// GEN-FIRST:event_boldAuthorActionPerformed
         fontWeight = FontWeight.NORMAL;
-        fontColor = Color.WHITE;
         if (boldAuthor.isSelected()) {
             fontWeight = FontWeight.BOLD;
             authorLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
@@ -693,7 +688,6 @@ public class BookPanel extends GridPane {
      */
     private void boldPageNumberActionPerformed(ActionEvent actionEvent) {// GEN-FIRST:event_boldPageNumberActionPerformed
         fontWeight = FontWeight.NORMAL;
-        fontColor = Color.WHITE;
         if (boldPageNumber.isSelected()) {
             fontWeight = FontWeight.BOLD;
             pagesLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
@@ -750,7 +744,6 @@ public class BookPanel extends GridPane {
      */
     private void boldStarRatingActionPerformed(ActionEvent actionEvent) {// GEN-FIRST:event_boldStarRatingActionPerformed
         fontWeight = FontWeight.NORMAL;
-        fontColor = Color.WHITE;
         if (boldStarRating.isSelected()) {
             fontWeight = FontWeight.BOLD;
             bookRatingLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
@@ -807,7 +800,6 @@ public class BookPanel extends GridPane {
      */
     private void boldUserRatingActionPerformed(ActionEvent actionEvent) {// GEN-FIRST:event_boldUserRatingActionPerformed
         fontWeight = FontWeight.NORMAL;
-        fontColor = Color.WHITE;
         if (boldUserRating.isSelected()) {
             fontWeight = FontWeight.BOLD;
             userRating.setFont(Font.font(fontStyle, fontWeight, fontSize));
@@ -848,6 +840,13 @@ public class BookPanel extends GridPane {
             totalRatingsLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
             totalRatingsLabel.setStyle("-fx-text-fill: white;");
         }
+
+        fontWeight = FontWeight.BOLD;
+        if (boldFormat.isSelected() == false) {
+            fontWeight = FontWeight.NORMAL;
+            formatLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
+            formatLabel.setStyle("-fx-text-fill: white;");
+        }
     }
 
     /*
@@ -857,7 +856,6 @@ public class BookPanel extends GridPane {
      */
     private void boldTotalRatingsActionPerformed(ActionEvent actionEvent) {// GEN-FIRST:event_boldTotalRatingsActionPerformed
         fontWeight = FontWeight.NORMAL;
-        fontColor = Color.WHITE;
         if (boldTotalRatings.isSelected()) {
             fontWeight = FontWeight.BOLD;
             totalRatingsLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
@@ -914,7 +912,6 @@ public class BookPanel extends GridPane {
      */
     private void boldFormatActionPerformed(ActionEvent actionEvent) {// GEN-FIRST:event_boldFormatActionPerformed
         fontWeight = FontWeight.NORMAL;
-        fontColor = Color.WHITE;
         if (boldFormat.isSelected()) {
             fontWeight = FontWeight.BOLD;
             formatLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
@@ -975,7 +972,6 @@ public class BookPanel extends GridPane {
         // normal
         if (noneBoldButton.isSelected()) {
             fontWeight = FontWeight.NORMAL;
-            fontColor = Color.WHITE;
             bookTitleLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
             bookTitleLabel.setStyle("-fx-text-fill: white;");
             authorLabel.setFont(Font.font(fontStyle, fontWeight, fontSize));
